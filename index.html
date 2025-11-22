@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>牙醫師開業全包式整合服務 | 打造理想診所</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@500;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // 咖啡大地色系
+                        'coffee-dark': '#4A3B32',     // 深咖啡 (主文字/標題)
+                        'coffee-med': '#8C7B70',      // 灰褐 (次要文字)
+                        'coffee-accent': '#C69C6D',   // 焦糖金 (按鈕/強調)
+                        'coffee-light': '#FDFBF7',    // 米白 (背景)
+                        'coffee-bg': '#F5F1E8',       // 淺奶茶 (區塊背景)
+                        'coffee-line': '#E6DCCF',     // 淺棕線條
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans TC"', 'sans-serif'],
+                        serif: ['"Noto Serif TC"', 'serif'],
+                    },
+                    letterSpacing: {
+                        'widest-art': '0.15em',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #FDFBF7;
+            color: #4A3B32;
+        }
+        /* 隱藏捲軸但保留功能 (給 Gallery 用) */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        /* Gallery Modal 動畫 */
+        #gallery-modal {
+            transition: opacity 0.3s ease;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-coffee-accent selection:text-white">
+
+    <nav class="fixed w-full bg-[#FDFBF7]/90 backdrop-blur-sm z-40 border-b border-coffee-line">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-xl font-bold tracking-widest text-coffee-dark border-y-2 border-coffee-dark py-1 font-serif">
+                        牙醫師開業全包式整合服務
+                    </span>
+                </div>
+                <div class="hidden md:flex space-x-10 text-sm font-medium tracking-widest text-coffee-med">
+                    <a href="#services" class="hover:text-coffee-accent transition">服務項目</a>
+                    <a href="#portfolio" class="hover:text-coffee-accent transition">成功案例</a>
+                    <a href="#faq" class="hover:text-coffee-accent transition">常見問題</a>
+                    <a href="#about" class="hover:text-coffee-accent transition">關於我們</a>
+                    <a href="#contact" class="px-6 py-2 bg-coffee-dark text-white hover:bg-coffee-accent transition duration-300 rounded-sm">
+                        立即諮詢
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-coffee-accent tracking-[0.2em] font-bold text-sm mb-4">牙醫師開業全包式整合服務</h2>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-coffee-dark leading-tight mb-8 font-serif">
+                    專注醫療<br>
+                    <span class="text-coffee-med">繁瑣交給我們</span>
+                </h1>
+                <p class="text-lg text-coffee-med mb-10 leading-relaxed">
+                    平日上班、假日上課，還要一邊聯絡很多廠商，<br>讓您疲累不已？<br>
+                    我們提供全包式開業服務，一站全包！<br>
+                    讓您診所開業更加順利高效。
+                </p>
+                <div class="flex gap-4">
+                    <a href="#contact" class="bg-coffee-dark text-white px-8 py-3 text-sm tracking-widest hover:bg-coffee-accent transition shadow-md rounded-sm">
+                        預約開業諮詢
+                    </a>
+                    <a href="#portfolio" class="border border-coffee-dark text-coffee-dark px-8 py-3 text-sm tracking-widest hover:bg-coffee-dark hover:text-white transition rounded-sm">
+                        瀏覽成功案例
+                    </a>
+                </div>
+            </div>
+            <div class="relative h-96 lg:h-[500px] overflow-hidden rounded-sm shadow-xl">
+                <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Clinic Design" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-coffee-dark/10"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-coffee-bg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold text-coffee-accent tracking-[0.3em] uppercase mb-3">Service</h2>
+                <h3 class="text-3xl font-bold text-coffee-dark font-serif">全包式開業解決方案</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white shadow-sm border-t-4 border-coffee-accent hover:-translate-y-2 transition duration-300 group overflow-hidden">
+                    <div class="h-56 overflow-hidden">
+                        <img src="service_01.jpg" onerror="this.src='https://images.unsplash.com/photo-1577415124269-fc1140a69e91?w=800'" alt="選址避雷" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8 lg:p-10">
+                        <div class="text-6xl font-serif text-coffee-bg mb-4 font-bold">01</div>
+                        <h4 class="text-xl font-bold text-coffee-dark mb-4">選址避雷</h4>
+                        <p class="text-coffee-med mb-6 leading-relaxed">專業的選址諮詢，根據目標客群與院所市場定位、預算評估，協助找到最適合的開業地點。</p>
+                        <ul class="space-y-2 text-sm text-coffee-dark marker:text-coffee-accent list-disc pl-5">
+                            <li>選址地點評估與分析</li>
+                            <li>市場定位與目標客群評估</li>
+                            <li>診所預期與預算配置</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white shadow-sm border-t-4 border-coffee-accent hover:-translate-y-2 transition duration-300 group overflow-hidden">
+                    <div class="h-56 overflow-hidden">
+                        <img src="service_02.jpg" onerror="this.src='https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800'" alt="空間美學設計" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8 lg:p-10">
+                        <div class="text-6xl font-serif text-coffee-bg mb-4 font-bold">02</div>
+                        <h4 class="text-xl font-bold text-coffee-dark mb-4">空間美學設計</h4>
+                        <p class="text-coffee-med mb-6 leading-relaxed">日式無印、英倫美式、北歐簡約，提供各種風格選定，打造出您理想的、美感的以及實用可靠的診所空間。</p>
+                        <ul class="space-y-2 text-sm text-coffee-dark marker:text-coffee-accent list-disc pl-5">
+                            <li>裝潢風格選定</li>
+                            <li>設計圖面繪製</li>
+                            <li>建材選擇建議</li>
+                            <li>施工品質監理</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-coffee-dark shadow-lg text-white transform md:col-span-2 lg:col-span-1 border-t-4 border-coffee-accent relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 bg-coffee-accent text-white text-xs font-bold px-3 py-1 z-10">業界獨家</div>
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="service_03.jpg" onerror="this.src='https://image.response.ai/assets/images/64f0b3b4-a690-482a-a704-58580e227a92_b5bb7ae5-b50a-48d6-9463-ae5f25713df8.jpeg'" alt="牙科設備" class="w-full h-full object-cover transition duration-700 group-hover:scale-105 opacity-90">
+                        <div class="absolute inset-0 bg-gradient-to-t from-coffee-dark to-transparent opacity-80"></div>
+                    </div>
+                    <div class="p-8 lg:p-10 relative">
+                        <div class="text-6xl font-serif text-white/10 mb-4 font-bold">03</div>
+                        <h4 class="text-xl font-bold text-white mb-4">牙科設備</h4>
+                        <p class="text-white/80 mb-6 leading-relaxed">業界首創！做到真正整合診所裝潢與牙科醫療設備，大大小小裡裡外外，真正全包式解決方案。</p>
+                        <ul class="space-y-2 text-sm text-white/90 marker:text-coffee-accent list-disc pl-5">
+                            <li>器械材料、治療椅、手術LED燈選用</li>
+                            <li>電子病歷系統、電腦機房設置</li>
+                            <li>CBCT、水雷射、口掃臉掃高端醫療設備</li>
+                            <li>專業安裝測試、操作訓練服務</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white shadow-sm border-t-4 border-coffee-accent hover:-translate-y-2 transition duration-300 group overflow-hidden">
+                    <div class="h-56 overflow-hidden">
+                        <img src="service_04.jpg" onerror="this.src='https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800'" alt="開業申請與核准" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8 lg:p-10">
+                        <div class="text-6xl font-serif text-coffee-bg mb-4 font-bold">04</div>
+                        <h4 class="text-xl font-bold text-coffee-dark mb-4">開業申請與核准</h4>
+                        <p class="text-coffee-med mb-6 leading-relaxed">備妥各項文件資料，向衛生主管機關遞件申請開業，協助現場稽查審核與核准通過。</p>
+                        <ul class="space-y-2 text-sm text-coffee-dark marker:text-coffee-accent list-disc pl-5">
+                            <li>整理申請資料、需符合主管機關規定</li>
+                            <li>X光室輻防檢測</li>
+                            <li>稽查人員現場審核</li>
+                            <li>合法合規准予通過</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold text-coffee-accent tracking-[0.3em] uppercase mb-3">Portfolio</h2>
+                <h3 class="text-3xl font-bold text-coffee-dark font-serif">實現夢想的具體樣貌</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="group cursor-pointer" onclick="openGallery('AZ')">
+                    <div class="aspect-[4/3] bg-gray-200 overflow-hidden mb-4 relative rounded-sm shadow-md">
+                        <img src="AZ_01.jpg" onerror="this.src='https://images.unsplash.com/photo-1600607686527-6fb886090705?w=600'" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="台北內湖診所">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition"></div>
+                        <div class="absolute bottom-4 right-4 bg-white/90 p-2 rounded-full">
+                            <svg class="w-5 h-5 text-coffee-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg>
+                        </div>
+                    </div>
+                    <h4 class="text-lg font-bold text-coffee-dark font-serif">台北內湖｜極致靜謐</h4>
+                    <p class="text-coffee-med text-sm mt-1">木質禪意，體現以客為尊</p>
+                </div>
+
+                <div class="group cursor-pointer" onclick="openGallery('Famous')">
+                    <div class="aspect-[4/3] bg-gray-200 overflow-hidden mb-4 relative rounded-sm shadow-md">
+                        <img src="Famous_01.jpg" onerror="this.src='https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=600'" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="新北新莊診所">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition"></div>
+                        <div class="absolute bottom-4 right-4 bg-white/90 p-2 rounded-full">
+                            <svg class="w-5 h-5 text-coffee-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg>
+                        </div>
+                    </div>
+                    <h4 class="text-lg font-bold text-coffee-dark font-serif">新北新莊｜溫暖親和</h4>
+                    <p class="text-coffee-med text-sm mt-1">日系無印格輕撫，營造如家般舒適</p>
+                </div>
+
+                <div class="group cursor-pointer" onclick="openGallery('yonghe')">
+                    <div class="aspect-[4/3] bg-gray-200 overflow-hidden mb-4 relative rounded-sm shadow-md">
+                        <img src="yonghe_01.jpg" onerror="this.src='https://images.unsplash.com/photo-1505691723518-36a5ac3be353?w=600'" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="新北永和診所">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition"></div>
+                        <div class="absolute bottom-4 right-4 bg-white/90 p-2 rounded-full">
+                            <svg class="w-5 h-5 text-coffee-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg>
+                        </div>
+                    </div>
+                    <h4 class="text-lg font-bold text-coffee-dark font-serif">新北永和｜現代風格</h4>
+                    <p class="text-coffee-med text-sm mt-1">結合暖色木料質感，醫療專業更勝一籌</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-coffee-bg border-y border-coffee-line">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h3 class="text-coffee-dark font-bold mb-8 font-serif text-xl">我們的合作夥伴</h3>
+            <div class="flex flex-wrap justify-center gap-6 md:gap-12">
+                <span class="text-coffee-med font-medium border border-coffee-line bg-white px-6 py-3 rounded-full">建築事務所</span>
+                <span class="text-coffee-med font-medium border border-coffee-line bg-white px-6 py-3 rounded-full">裝潢設計公司</span>
+                <span class="text-coffee-med font-medium border border-coffee-line bg-white px-6 py-3 rounded-full">牙科設備供應商</span>
+                <span class="text-coffee-med font-medium border border-coffee-line bg-white px-6 py-3 rounded-full">連鎖牙科管理顧問</span>
+                <span class="text-coffee-med font-medium border border-coffee-line bg-white px-6 py-3 rounded-full">法規顧問</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="whyus" class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-sm font-bold text-coffee-accent tracking-[0.3em] uppercase mb-4">Why Us</h2>
+                    <h3 class="text-3xl font-bold text-coffee-dark mb-8 font-serif">為什麼選擇我們？</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="border-l-4 border-coffee-accent pl-4">
+                            <h4 class="font-bold text-coffee-dark">十年以上業界經驗</h4>
+                            <p class="text-sm text-coffee-med">豐富的牙醫開業輔導經驗</p>
+                        </div>
+                        <div class="border-l-4 border-coffee-accent pl-4">
+                            <h4 class="font-bold text-coffee-dark">多個成功開業案例</h4>
+                            <p class="text-sm text-coffee-med">已協助眾多牙醫師成功開業</p>
+                        </div>
+                        <div class="border-l-4 border-coffee-accent pl-4">
+                            <h4 class="font-bold text-coffee-dark">一站式完整服務</h4>
+                            <p class="text-sm text-coffee-med">從選址到開業全程服務</p>
+                        </div>
+                        <div class="border-l-4 border-coffee-accent pl-4">
+                            <h4 class="font-bold text-coffee-dark">菜單式標配選配</h4>
+                            <p class="text-sm text-coffee-med">彈性化服務配置選擇</p>
+                        </div>
+                        <div class="border-l-4 border-coffee-accent pl-4">
+                            <h4 class="font-bold text-coffee-dark">完整客服進度追蹤</h4>
+                            <p class="text-sm text-coffee-med">全程透明化進度管理</p>
+                        </div>
+                        <div class="border-l-4 border-coffee-accent pl-4">
+                            <h4 class="font-bold text-coffee-dark">免費諮詢表單</h4>
+                            <p class="text-sm text-coffee-med">專業顧問免費初步諮詢</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="about" class="bg-coffee-bg p-8 lg:p-12 rounded-sm">
+                    <h3 class="text-2xl font-bold text-coffee-dark mb-6 font-serif">專業團隊，值得信賴</h3>
+                    <p class="text-coffee-med leading-loose mb-6 text-sm">
+                        我們的創立源於對牙醫產業的深刻理解與熱情。我們觀察到許多牙醫師在追求專業醫療的同時，想要去實現診所開業理想，卻常因不熟悉開業流程、缺乏相關資源，甚至是被廠商呼攏，而感到困擾。
+                    </p>
+                    <p class="text-coffee-med leading-loose mb-8 text-sm">
+                        為了解決這個痛點，我們集結了一群在建築室內設計、醫療設備供應、牙科診所經營、法規諮詢等領域擁有豐富經驗的專家們，共同打造這個牙科開業服務包。
+                    </p>
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded shadow-sm">
+                            <strong class="text-coffee-accent block text-xs tracking-widest uppercase mb-1">Vision</strong>
+                            <p class="text-coffee-dark font-medium">願景：成為牙醫師開業的首選夥伴</p>
+                        </div>
+                        <div class="bg-white p-4 rounded shadow-sm">
+                            <strong class="text-coffee-accent block text-xs tracking-widest uppercase mb-1">Mission</strong>
+                            <p class="text-coffee-dark font-medium">使命：提供優質全面完整的全包式開業方案</p>
+                        </div>
+                        <div class="bg-white p-4 rounded shadow-sm">
+                            <strong class="text-coffee-accent block text-xs tracking-widest uppercase mb-1">Value</strong>
+                            <p class="text-coffee-dark font-medium">價值：提供最可靠、可期待的開業整合服務</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-20 max-w-4xl mx-auto px-4 border-t border-coffee-line">
+        <h2 class="text-center text-2xl font-bold text-coffee-dark mb-12 font-serif">常見問題</h2>
+        <div class="space-y-4">
+            <details class="group bg-white border border-coffee-line rounded-sm p-4">
+                <summary class="flex justify-between items-center font-bold cursor-pointer list-none text-coffee-dark">
+                    <span>你們的服務範圍涵蓋哪些地區？</span>
+                    <span class="transition group-open:rotate-180 text-coffee-accent">▼</span>
+                </summary>
+                <p class="text-coffee-med mt-4 text-sm leading-relaxed pl-4 border-l-2 border-coffee-line">
+                    我們的服務範圍目前以台北市、新北市、桃園市為主，但無論您在哪個縣市，我們都能提供專業的諮詢協助。
+                </p>
+            </details>
+            
+            <details class="group bg-white border border-coffee-line rounded-sm p-4">
+                <summary class="flex justify-between items-center font-bold cursor-pointer list-none text-coffee-dark">
+                    <span>你們會協助處理開業所需的法規申請嗎？</span>
+                    <span class="transition group-open:rotate-180 text-coffee-accent">▼</span>
+                </summary>
+                <p class="text-coffee-med mt-4 text-sm leading-relaxed pl-4 border-l-2 border-coffee-line">
+                    是的，我們將提供相關的法規諮詢與協助，確保您的診所符合所有必要的法律規範與開業執照要求。
+                </p>
+            </details>
+
+            <details class="group bg-white border border-coffee-line rounded-sm p-4">
+                <summary class="flex justify-between items-center font-bold cursor-pointer list-none text-coffee-dark">
+                    <span>從諮詢到診所開業核准通過，大約需要多長時間？</span>
+                    <span class="transition group-open:rotate-180 text-coffee-accent">▼</span>
+                </summary>
+                <p class="text-coffee-med mt-4 text-sm leading-relaxed pl-4 border-l-2 border-coffee-line">
+                    每個專案所需要的時間，會因診所規模、設計複雜度以及相關法規核准流程而異。一般而言，從初步諮詢到診所正式核准開業，大約需要3到6個月的時間。
+                </p>
+            </details>
+
+            <details class="group bg-white border border-coffee-line rounded-sm p-4">
+                <summary class="flex justify-between items-center font-bold cursor-pointer list-none text-coffee-dark">
+                    <span>如果我已經有部分合作、已訂購的牙科設備/廠商，你們還能提供服務嗎？</span>
+                    <span class="transition group-open:rotate-180 text-coffee-accent">▼</span>
+                </summary>
+                <p class="text-coffee-med mt-4 text-sm leading-relaxed pl-4 border-l-2 border-coffee-line">
+                    當然可以。我們的服務具有高度彈性，可以根據您自身需求，客製化調整開業套餐內容。
+                </p>
+            </details>
+
+            <details class="group bg-white border border-coffee-line rounded-sm p-4">
+                <summary class="flex justify-between items-center font-bold cursor-pointer list-none text-coffee-dark">
+                    <span>你們的收費方式是如何計算的？</span>
+                    <span class="transition group-open:rotate-180 text-coffee-accent">▼</span>
+                </summary>
+                <p class="text-coffee-med mt-4 text-sm leading-relaxed pl-4 border-l-2 border-coffee-line">
+                    我們的收費會根據您選擇的開業服務項目而定。在初步諮詢後，我們會進一步討論，確認您的開業理想需求、想要的裝潢風格、想用的牙科醫療設備，提供套餐式報價內容。
+                </p>
+            </details>
+
+            <details class="group bg-white border border-coffee-line rounded-sm p-4">
+                <summary class="flex justify-between items-center font-bold cursor-pointer list-none text-coffee-dark">
+                    <span>你們提供售後服務嗎？</span>
+                    <span class="transition group-open:rotate-180 text-coffee-accent">▼</span>
+                </summary>
+                <p class="text-coffee-med mt-4 text-sm leading-relaxed pl-4 border-l-2 border-coffee-line">
+                    是的，我們提供完整的售後服務，包括診所裝潢、設備維護、技術支援以及診所營運諮詢，確保您的診所開業後能開開心心、順利營運。
+                </p>
+            </details>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-coffee-dark text-white py-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-3xl font-bold mb-4 font-serif text-coffee-accent">讓夢想落地<br>從一次諮詢開始</h2>
+                    <p class="text-white/70 mb-10">填寫表單或直接聯繫，我們的顧問將儘速回覆。</p>
+                    
+                    <div class="space-y-8 text-sm tracking-wide text-white/80">
+                        <div class="flex items-start gap-4">
+                            <span class="w-20 text-coffee-accent uppercase font-bold pt-1">Line@</span>
+                            <div>
+                                <p class="mb-2 text-white text-lg">牙醫開業一站通</p>
+                                <div class="bg-white p-2 inline-block rounded-sm">
+                                    <img src="DaVahVEJ.png" alt="Line QR Code" class="w-32 h-32 object-contain" onerror="this.src='https://via.placeholder.com/150?text=QR+Code'">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="w-20 text-coffee-accent uppercase font-bold">Area</span>
+                            <span class="text-lg">台北 / 新北 / 桃園</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="https://formspree.io/f/movbegeg" method="POST" class="space-y-4 bg-[#3E3229] p-8 border border-[#5C4B3E] rounded-sm">
+                    <div>
+                        <label class="block text-xs text-coffee-accent uppercase tracking-widest mb-2">醫師姓名 / Name</label>
+                        <input type="text" name="name" required class="w-full bg-[#2C241D] border border-[#5C4B3E] text-white px-4 py-3 focus:outline-none focus:border-coffee-accent placeholder-white/30" placeholder="您的稱呼">
+                    </div>
+                    <div>
+                        <label class="block text-xs text-coffee-accent uppercase tracking-widest mb-2">聯絡電話 / Phone</label>
+                        <input type="tel" name="phone" required class="w-full bg-[#2C241D] border border-[#5C4B3E] text-white px-4 py-3 focus:outline-none focus:border-coffee-accent placeholder-white/30" placeholder="09xx-xxx-xxx">
+                    </div>
+                    <div>
+                        <label class="block text-xs text-coffee-accent uppercase tracking-widest mb-2">電子郵件 / Email</label>
+                        <input type="email" name="email" required class="w-full bg-[#2C241D] border border-[#5C4B3E] text-white px-4 py-3 focus:outline-none focus:border-coffee-accent placeholder-white/30" placeholder="您的 Email">
+                    </div>
+                    <div>
+                        <label class="block text-xs text-coffee-accent uppercase tracking-widest mb-2">需求項目 / Service</label>
+                        <select name="service" class="w-full bg-[#2C241D] border border-[#5C4B3E] text-white/80 px-4 py-3 focus:outline-none focus:border-coffee-accent">
+                            <option value="全包式整合方案">全包式整合方案</option>
+                            <option value="選址諮詢">選址諮詢</option>
+                            <option value="空間設計裝潢">空間設計裝潢</option>
+                            <option value="設備採購整合">設備採購整合</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full bg-coffee-accent text-white font-bold py-4 mt-4 hover:bg-[#B58A5B] transition uppercase tracking-widest text-sm rounded-sm">
+                        送出諮詢表單
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#2C241D] text-white/40 py-8 text-center text-xs border-t border-[#3E3229]">
+        <p>&copy; 2025 牙醫師開業全包式整合服務 All rights reserved.</p>
+    </footer>
+
+    <div id="gallery-modal" class="fixed inset-0 z-50 hidden bg-black/90 flex items-center justify-center p-4">
+        <button onclick="closeGallery()" class="absolute top-6 right-6 text-white hover:text-coffee-accent z-50 p-2">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        
+        <button onclick="changeImage(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 p-3 rounded-full text-white transition">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+        </button>
+        <button onclick="changeImage(1)" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 p-3 rounded-full text-white transition">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </button>
+
+        <div class="relative w-full max-w-5xl aspect-video">
+            <img id="gallery-img" src="" class="w-full h-full object-contain" alt="Gallery Image">
+            <div class="absolute bottom-4 left-0 w-full text-center text-white/80 text-sm font-medium tracking-widest">
+                <span id="gallery-counter">1 / 6</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 設定目前的狀態
+        let currentCase = '';
+        let currentIndex = 1;
+        const totalImages = 6;
+        const modal = document.getElementById('gallery-modal');
+        const imgElement = document.getElementById('gallery-img');
+        const counterElement = document.getElementById('gallery-counter');
+
+        // 開啟圖庫
+        function openGallery(caseName) {
+            currentCase = caseName;
+            currentIndex = 1;
+            updateImage();
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // 禁止背景捲動
+        }
+
+        // 關閉圖庫
+        function closeGallery() {
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        // 切換圖片
+        function changeImage(direction) {
+            currentIndex += direction;
+            if (currentIndex > totalImages) currentIndex = 1;
+            if (currentIndex < 1) currentIndex = totalImages;
+            updateImage();
+        }
+
+        // 更新圖片來源
+        function updateImage() {
+            // 檔名格式：案名_01.jpg, 案名_02.jpg ...
+            // 若數字小於10，補0 (如 01, 02)
+            const numStr = currentIndex.toString().padStart(2, '0');
+            const fileName = `${currentCase}_${numStr}.jpg`;
+            
+            imgElement.src = fileName;
+            
+            // 如果圖片載入失敗(因為還沒放檔案)，顯示假圖
+            imgElement.onerror = function() {
+                this.src = `https://via.placeholder.com/1200x800/3E3229/FFFFFF?text=${currentCase}_${numStr}.jpg+Not+Found`;
+            };
+
+            counterElement.textContent = `${currentIndex} / ${totalImages}`;
+        }
+
+        // 點擊背景關閉
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeGallery();
+        });
+
+        // 鍵盤控制
+        document.addEventListener('keydown', (e) => {
+            if (modal.classList.contains('hidden')) return;
+            if (e.key === 'Escape') closeGallery();
+            if (e.key === 'ArrowLeft') changeImage(-1);
+            if (e.key === 'ArrowRight') changeImage(1);
+        });
+    </script>
+</body>
+</html>
