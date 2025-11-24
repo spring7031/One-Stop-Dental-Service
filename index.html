@@ -62,7 +62,7 @@
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0 flex items-center">
                     <span class="text-xl font-bold tracking-widest text-coffee-dark border-y-2 border-coffee-dark py-1 font-serif">
-                        牙醫師開業全包式整合服務
+                        DENTIST ONE
                     </span>
                 </div>
                 <div class="hidden md:flex space-x-10 text-sm font-medium tracking-widest text-coffee-med">
@@ -101,7 +101,7 @@
                 </div>
             </div>
             <div class="relative h-96 lg:h-[500px] overflow-hidden rounded-sm shadow-xl">
-                <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Clinic Design" class="w-full h-full object-cover">
+                <img src="my_new_photo.jpg" onerror="this.src='https://images.unsplash.com/photo-1504855101007-84620f3b4b04?w=1200'" alt="Clinic Design" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-coffee-dark/10"></div>
             </div>
         </div>
@@ -151,7 +151,7 @@
                 <div class="bg-coffee-dark shadow-lg text-white transform md:col-span-2 lg:col-span-1 border-t-4 border-coffee-accent relative overflow-hidden group">
                     <div class="absolute top-0 right-0 bg-coffee-accent text-white text-xs font-bold px-3 py-1 z-10">業界獨家</div>
                     <div class="h-56 overflow-hidden relative">
-                        <img src="service_03.jpg" onerror="this.src='https://image.response.ai/assets/images/64f0b3b4-a690-482a-a704-58580e227a92_b5bb7ae5-b50a-48d6-9463-ae5f25713df8.jpeg'" alt="牙科設備" class="w-full h-full object-cover transition duration-700 group-hover:scale-105 opacity-90">
+                        <img src="service_03.jpg" onerror="this.src='https://images.unsplash.com/photo-1516549655169-df83a25a83f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'" alt="牙科設備" class="w-full h-full object-cover transition duration-700 group-hover:scale-105 opacity-90">
                         <div class="absolute inset-0 bg-gradient-to-t from-coffee-dark to-transparent opacity-80"></div>
                     </div>
                     <div class="p-8 lg:p-10 relative">
@@ -386,7 +386,7 @@
                             <div>
                                 <p class="mb-2 text-white text-lg">牙醫開業一站通</p>
                                 <div class="bg-white p-2 inline-block rounded-sm">
-                                    <img src="DaVahVEJ.png" alt="Line QR Code" class="w-32 h-32 object-contain" onerror="this.src='https://via.placeholder.com/150?text=QR+Code'">
+                                    <img src="LINE-DaVahVEJ.jpg" alt="Line QR Code" class="w-32 h-32 object-contain" onerror="this.src='https://via.placeholder.com/150?text=QR+Code'">
                                 </div>
                             </div>
                         </div>
@@ -428,25 +428,28 @@
     </section>
 
     <footer class="bg-[#2C241D] text-white/40 py-8 text-center text-xs border-t border-[#3E3229]">
-        <p>&copy; 2025 牙醫師開業全包式整合服務 All rights reserved.</p>
+        <p>&copy; 2024 Dentist One-Stop Solution. All rights reserved.</p>
     </footer>
 
-    <div id="gallery-modal" class="fixed inset-0 z-50 hidden bg-black/90 flex items-center justify-center p-4">
-        <button onclick="closeGallery()" class="absolute top-6 right-6 text-white hover:text-coffee-accent z-50 p-2">
+    <div id="gallery-modal" class="fixed inset-0 z-50 hidden bg-black/95 flex items-center justify-center p-0 md:p-4">
+        
+        <button onclick="closeGallery()" class="absolute top-4 right-4 md:top-6 md:right-6 text-white bg-black/50 rounded-full p-2 z-[70] hover:text-coffee-accent transition">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
         
-        <button onclick="changeImage(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 p-3 rounded-full text-white transition">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-        </button>
-        <button onclick="changeImage(1)" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 p-3 rounded-full text-white transition">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        <button onclick="event.stopPropagation(); changeImage(-1)" class="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 p-4 rounded-full text-white transition z-[60] cursor-pointer">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
         </button>
 
-        <div class="relative w-full max-w-5xl aspect-video">
-            <img id="gallery-img" src="" class="w-full h-full object-contain" alt="Gallery Image">
-            <div class="absolute bottom-4 left-0 w-full text-center text-white/80 text-sm font-medium tracking-widest">
-                <span id="gallery-counter">1 / 6</span>
+        <button onclick="event.stopPropagation(); changeImage(1)" class="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 p-4 rounded-full text-white transition z-[60] cursor-pointer">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </button>
+
+        <div class="relative w-full h-full md:h-auto md:max-w-5xl md:aspect-video flex items-center justify-center pointer-events-none">
+            <img id="gallery-img" src="" class="max-w-full max-h-screen md:max-h-[85vh] object-contain pointer-events-auto shadow-2xl" alt="Gallery Image">
+            
+            <div class="absolute bottom-8 left-0 w-full text-center pointer-events-none">
+                <span id="gallery-counter" class="bg-black/60 text-white px-4 py-1 rounded-full text-sm font-medium tracking-widest border border-white/20">1 / 6</span>
             </div>
         </div>
     </div>
@@ -477,6 +480,8 @@
 
         // 切換圖片
         function changeImage(direction) {
+            // 加入這個 log 可以讓你在電腦 F12 看有沒有觸發
+            console.log("Switching image:", direction); 
             currentIndex += direction;
             if (currentIndex > totalImages) currentIndex = 1;
             if (currentIndex < 1) currentIndex = totalImages;
@@ -485,22 +490,20 @@
 
         // 更新圖片來源
         function updateImage() {
-            // 檔名格式：案名_01.jpg, 案名_02.jpg ...
-            // 若數字小於10，補0 (如 01, 02)
             const numStr = currentIndex.toString().padStart(2, '0');
             const fileName = `${currentCase}_${numStr}.jpg`;
             
             imgElement.src = fileName;
             
-            // 如果圖片載入失敗(因為還沒放檔案)，顯示假圖
             imgElement.onerror = function() {
-                this.src = `https://via.placeholder.com/1200x800/3E3229/FFFFFF?text=${currentCase}_${numStr}.jpg+Not+Found`;
+                // 如果找不到圖，顯示這張提示圖
+                this.src = `https://via.placeholder.com/800x600/3E3229/FFFFFF?text=${currentCase}_${numStr}`;
             };
 
             counterElement.textContent = `${currentIndex} / ${totalImages}`;
         }
 
-        // 點擊背景關閉
+        // 點擊背景關閉 (這裡要注意，按鈕已經加了 stopPropagation，所以不會觸發這個)
         modal.addEventListener('click', (e) => {
             if (e.target === modal) closeGallery();
         });
@@ -512,6 +515,24 @@
             if (e.key === 'ArrowLeft') changeImage(-1);
             if (e.key === 'ArrowRight') changeImage(1);
         });
+        
+        // ★新增：支援手機左右滑動切換 (Swipe) ★
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        modal.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        modal.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) changeImage(1); // 向左滑，下一張
+            if (touchEndX > touchStartX + 50) changeImage(-1); // 向右滑，上一張
+        }
     </script>
 </body>
 </html>
